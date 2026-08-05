@@ -936,6 +936,86 @@ footer .footer-glow {
   pointer-events: none;
 }
 
+/* ── 15b. DESIGNER CREDIT — Romero's Studios + hover contact ── */
+.footer-design {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+  margin: 0;
+}
+.design-studio {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #f0c96a;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border-bottom: 1px dotted rgba(240,201,106,0.55);
+  padding-bottom: 1px;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+.design-studio:hover,
+.design-studio:focus {
+  color: #f7dd9c;
+  text-shadow: 0 0 14px rgba(240,201,106,0.45);
+  outline: none;
+}
+.design-tooltip {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px;
+  white-space: nowrap;
+  background: linear-gradient(160deg, #0d2840 0%, #07182a 100%);
+  border: 1px solid rgba(53,224,213,0.28);
+  border-radius: 14px;
+  box-shadow: 0 16px 44px rgba(0,0,0,0.55), 0 0 34px rgba(53,224,213,0.1), inset 0 1px 0 rgba(255,255,255,0.08);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 6;
+}
+.design-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%; left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-top-color: rgba(53,224,213,0.28);
+}
+.design-studio:hover .design-tooltip,
+.design-studio:focus .design-tooltip,
+.design-studio:focus-within .design-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: all;
+}
+.design-tooltip a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #bfeef4;
+  font-size: 0.84rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.design-tooltip a svg { width: 15px; height: 15px; flex: none; color: #35e0d5; }
+.design-tooltip a:hover {
+  color: #f0c96a;
+  transform: translateX(3px);
+}
+[dir="rtl"] .design-tooltip a { flex-direction: row; }
+[dir="rtl"] .design-tooltip a:hover { transform: translateX(-3px); }
+@media (max-width: 480px) {
+  .design-tooltip { white-space: normal; }
+}
+
 /* ═══════════════════════════════════════════════════════════════
    16. FLOATING WIDGETS — liquid glow
 ═══════════════════════════════════════════════════════════════ */
