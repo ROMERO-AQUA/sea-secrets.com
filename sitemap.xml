@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://sea-secrets.com/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sea-secrets.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sea-secrets.com/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sea-secrets.com/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sea-secrets.com/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://sea-secrets.com/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sea-secrets.com/?lang=pl"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sea-secrets.com/?lang=cs"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sea-secrets.com/?lang=uk"/>
+  </url>
+  <url>
+    <loc>https://sea-secrets.com/trips/hula-hula.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sea-secrets.com/trips/magawish.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sea-secrets.com/trips/orange-island.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sea-secrets.com/trips/deep-sea-diving.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sea-secrets.com/trips/dolphin-trip.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sea-secrets.com/trips/paradise-island.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sea-secrets.com/trips/private-speedboat.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

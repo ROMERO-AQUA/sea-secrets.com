@@ -1,0 +1,182 @@
+ROLE: You are the world's best luxury travel web designer + senior full-stack 
+engineer + technical SEO specialist, combined. You are rebuilding 
+sea-secrets.com — Sea Secrets Hurghada, a Red Sea boat trip and diving 
+operator based in Hurghada, Egypt. Treat this like a $1,000,000 agency 
+deliverable. Full rebuild, not patches.
+
+═══════════════════════════════════════════
+EXISTING BUSINESS DATA (verified via Google Maps + Tripadvisor — use this real 
+content, do not invent placeholder trips)
+═══════════════════════════════════════════
+Business: Sea Secrets Hurghada
+Address: 50 Hurghada, Egypt, Hurghada 85411, Egypt
+GPS coordinates: 27.1297151, 33.8307899
+Contact: WhatsApp +20 111 089 0202 (primary/booking) and +20 111 739 8388 
+  (secondary — label clearly, don't just duplicate blindly)
+Email: mayghali@onetel.com
+Social: Facebook, Instagram (@sea_secret_hurghada)
+Tripadvisor: 13 reviews, mostly 5-star, ranked #331 of 1,308 Boat Tours & 
+  Water Sports in Hurghada — reviews praise the crew, food, safety, and 
+  snorkeling quality
+
+⚠️ CRITICAL — VERIFY BEFORE LAUNCH: There are multiple similarly-named 
+listings online ("Sea Secret Diving," "LiveAboard Sea Secrets," "Sea Secrets 
+Hurghada") that may be separate businesses, competitors, or the same company 
+under different online profiles. One of these ("LiveAboard Sea Secrets") has 
+a serious negative Tripadvisor review about boat safety. DO NOT pull reviews, 
+ratings, or LocalBusiness schema data from any listing other than the exact 
+Google Business Profile matching these coordinates and this website's phone 
+numbers. Flag this ambiguity to me explicitly in your build summary rather 
+than silently picking one — get my confirmation on which GBP listing is 
+authoritative before wiring up review schema or a reviews widget.
+
+Trips to feature (real names/descriptions, all currently full-day 9 AM 
+departures unless noted):
+1. Hula Hula Island Sea Trip — crystal clear shallows, white sands, 2 
+   snorkeling stops, buffet lunch on board
+2. Magawish Island Sea Trip — golden sands, turquoise waters, 2 snorkeling 
+   stops, buffet lunch
+3. Orange Island Sea Trip — shallow turquoise waters, iconic orange parasols, 
+   2 snorkeling stops
+4. Deep Sea Diving Trip — certified instructor, 2 guided dives, coral walls, 
+   snorkeling option for non-divers
+5. Dolphin Sea Trip — Dolphin House lagoon, swim with wild dolphins, 2 
+   snorkeling stops
+6. Paradise Island Sea Trip — Giftun Islands National Park, white sand, teal 
+   lagoons, chance to see rays/turtles
+7. Private Speedboat Trip — 3 hrs, flexible 9am-2pm, up to 6 people, fully 
+   private, snorkeling gear + refreshments included
+
+CRITICAL FLAG: every trip currently shows "Price on Request" — no real price 
+anywhere on the site. This kills conversion and SEO (price is a rich-result 
+ranking signal). Ask me for real prices before launch, OR clearly mark 
+placeholder pricing as [PRICING TBD] so nothing fake ships live.
+
+CRITICAL FLAG: the booking form collects a passport image upload. Handle as 
+sensitive PII — secure upload endpoint, no plain public storage, clear 
+privacy notice near the field.
+
+═══════════════════════════════════════════
+KNOWN CURRENT PROBLEMS TO FIX
+═══════════════════════════════════════════
+- No visible language switcher despite serving international tourists
+- No schema.org markup, weak/missing meta descriptions
+- Autoplay Cloudinary hero video likely hurting load speed and CLS
+- Site content appears duplicated in raw HTML (double nav/hero render) — 
+  investigate and eliminate any duplicate DOM/render bug
+- No real pricing anywhere — "Price on Request" on every single trip
+
+═══════════════════════════════════════════
+1) VISUAL REDESIGN — ELEGANT, CLASSY, LUXURY RED SEA AESTHETIC
+═══════════════════════════════════════════
+- Palette: deep Red Sea teal/navy + warm sand/gold accents + off-white — not 
+  generic travel-site blue/orange
+- Typography: refined serif or high-end sans for headings (e.g. Fraunces / 
+  Playfair Display paired with Inter/Sora for body) — no default system fonts
+- Generous whitespace, large editorial underwater/island photography, subtle 
+  parallax on scroll
+- Micro-interactions: smooth hover states, magnetic buttons, scroll-reveal 
+  animations (IntersectionObserver-based, lightweight)
+- Sticky glassmorphism nav that shrinks on scroll
+- Trip cards: subtle 3D tilt-on-hover, trip name + duration + group size + 
+  price all visible at a glance (once real pricing is supplied)
+- Mobile-first: this audience books from resort wifi on phones via 
+  WhatsApp — design mobile layouts FIRST
+
+═══════════════════════════════════════════
+2) BEST-IN-CLASS SEO
+═══════════════════════════════════════════
+- Server-side render or statically generate every trip page — no 
+  crawler-invisible content
+- Unique canonical URL + unique meta title/description per trip page
+- Full Schema.org JSON-LD: TouristTrip, LocalBusiness (with the Hurghada geo 
+  coordinates above), AggregateRating (only once the correct GBP listing is 
+  confirmed), BreadcrumbList, FAQPage
+- Semantic HTML5, proper single H1 per page with logical H2-H6 hierarchy
+- XML sitemap auto-generated, correctly configured robots.txt
+- Open Graph + Twitter Card meta tags per page using real trip photos
+- hreflang tags for every supported language (see section 3)
+- Core Web Vitals targets: LCP < 2.0s, CLS < 0.05, INP < 200ms
+
+═══════════════════════════════════════════
+3) MULTI-LANGUAGE — REAL TRANSLATIONS, AUTO-DETECT, INSTANT SWITCH
+═══════════════════════════════════════════
+- Support Russian, German, English, Arabic, Italian, Polish, Czech, and 
+  Ukrainian as priority languages (Hurghada's actual dominant tourist markets), 
+  expandable later — prioritize doing 8 languages *well* over spreading thin
+- DO NOT use Google Translate widget or any runtime machine-translation API. 
+  Build proper i18n architecture with hand-authored translation JSON per 
+  locale (translation.json per language, namespaced: nav, hero, trips, 
+  booking, footer, faq)
+- Auto-detect language via navigator.language / Accept-Language header, with 
+  persistent user override in localStorage
+- Arabic gets full RTL layout (mirrored nav, icons, RTL-aware typography) — 
+  not just flipped text
+- CRITICAL: language switching must happen client-side with ZERO page reload. 
+  Swap all UI strings instantly via a reactive i18n context (React Context + 
+  i18next or framework-native equivalent). No route change, no flash of 
+  untranslated content, no full page re-fetch
+
+═══════════════════════════════════════════
+4) PERFORMANCE — SEO-FRIENDLY AND AI-AGENT-FRIENDLY
+═══════════════════════════════════════════
+- Replace the autoplay Cloudinary hero video with an optimized AVIF/WebP 
+  poster image; lazy-load the video so it only plays after interaction or 
+  in-viewport, serve a compressed/resized version, not the raw upload
+- Image optimization across all trip photos: AVIF/WebP with fallbacks, 
+  responsive srcset, lazy loading below the fold
+- Code-split by route, defer non-critical JS, eliminate the duplicate 
+  DOM/render issue found in the current build
+- Add an /llms.txt summarizing the business, trip categories, location, and 
+  booking method in plain language for AI agents/assistants to reference 
+  accurately
+- Ensure all critical content (trip names, descriptions, contact info) is 
+  present in the initial HTML — not injected only via client JS
+
+═══════════════════════════════════════════
+5) 3D ANIMATED INTRO / LOADING EXPERIENCE
+═══════════════════════════════════════════
+- Short (1.5–2.5s max, skippable) cinematic intro using WebGL/Three.js or CSS 
+  3D transforms: e.g. a stylized wave / coral / bubble particle animation 
+  resolving into the Sea Secrets logo, then fading into the homepage
+- Must NOT block indexing or delay Largest Contentful Paint — pure visual 
+  overlay on top of already-loading real content; auto-skip for repeat 
+  visitors (localStorage flag), reduced-motion users, and bots/crawlers
+- Tasteful skip button appears after ~1s
+
+═══════════════════════════════════════════
+6) WHATSAPP BUTTON + AI CONCIERGE
+═══════════════════════════════════════════
+- Persistent floating WhatsApp button (bottom-right, mirrored for Arabic RTL) 
+  deep-linking to +20 111 089 0202 with a pre-filled message per trip page 
+  (e.g. "Hi, I'm interested in the Dolphin Sea Trip")
+- Add a lightweight AI concierge chat widget that answers common questions — 
+  trip availability, what's included, meeting point/pickup, diving 
+  certification requirements, group vs private options — in the visitor's 
+  currently selected language, then hands off to the WhatsApp button for 
+  actual booking
+- Both lazy-loaded, not blocking initial render
+
+═══════════════════════════════════════════
+7) DELIVERABLE + SELF-CHECK
+═══════════════════════════════════════════
+Build as a modern production-grade stack (Next.js/Astro or similar with SSR 
+or static generation — prioritize whichever produces server-rendered HTML for 
+SEO). Clean structure: components/, locales/, lib/seo/, content/trips/.
+
+Before calling it done, verify:
+□ Every trip page has unique title/description/canonical
+□ Content is visible with JavaScript disabled (view-source test)
+□ No duplicate nav/hero rendering anywhere in the DOM
+□ Language switch has zero reload, zero flash of untranslated text
+□ Arabic renders correctly in RTL
+□ Lighthouse SEO 95+, Performance 90+
+□ Intro animation doesn't delay LCP or block bots
+□ WhatsApp button links work with correct pre-filled messages
+□ Booking form's passport upload is handled securely with a privacy note
+□ Schema markup validates in Google's Rich Results Test
+
+Flag clearly in your final summary: (1) any trip where you had to placeholder 
+pricing, (2) the final Lighthouse scores, (3) what you found/fixed regarding 
+the duplicate DOM rendering bug, (4) confirmation request on which GBP/review 
+listing is authoritative before shipping review schema.

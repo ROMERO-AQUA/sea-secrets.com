@@ -1,0 +1,21 @@
+{
+  "short_name": "Sea Secrets",
+  "name": "Sea Secrets Hurghada — Red Sea Adventures",
+  "icons": [
+    {
+      "src": "assets/images/hula.jpg",
+      "type": "image/jpeg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/images/hula.jpg",
+      "type": "image/jpeg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#091D2F",
+  "theme_color": "#0B4F6C",
+  "display": "standalone",
+  "orientation": "portrait"
+}
