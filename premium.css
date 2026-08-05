@@ -999,7 +999,7 @@ footer .footer-glow {
 
 /* ── 16b. CONCIERGE WIDGET — deep-sea glass panel ── */
 .concierge-widget {
-  width: 340px;
+  width: 395px;
   background:
     radial-gradient(ellipse 90% 60% at 100% 0%, rgba(53,224,213,0.08) 0%, transparent 60%),
     radial-gradient(ellipse 80% 50% at 0% 100%, rgba(11,79,108,0.25) 0%, transparent 70%),
@@ -1093,7 +1093,7 @@ footer .footer-glow {
 }
 .concierge-feed {
   padding: 16px;
-  height: 260px;
+  height: 300px;
   gap: 10px;
   background: transparent;
 }
@@ -1314,6 +1314,7 @@ footer .footer-glow {
   .hero-ray { width: 22vw; }
   .fx-jellyfish { left: 3%; }
   .marquee::before, .marquee::after { width: 50px; }
+  .concierge-widget { width: min(395px, calc(100vw - 32px)); }
 }
 
 @media (max-width: 480px) {
