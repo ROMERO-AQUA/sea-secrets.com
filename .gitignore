@@ -1,0 +1,10 @@
+# Saved Hostinger dashboard backup (junk)
+assets/images/Home _ Hostinger.html
+assets/images/Home _ Hostinger_files/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.vercel/
