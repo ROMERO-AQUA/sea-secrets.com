@@ -488,6 +488,7 @@
 
     toggleBtn.addEventListener('click', () => {
       widget.classList.toggle('open');
+      toggleBtn.setAttribute('aria-expanded', widget.classList.contains('open') ? 'true' : 'false');
     });
 
     if (closeBtn) {

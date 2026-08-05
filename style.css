@@ -1124,7 +1124,7 @@ footer {
 .back-to-top {
   position: fixed;
   bottom: calc(var(--sp-8) + 68px); /* stacked above the WA button */
-  right: var(--sp-8);
+  left: var(--sp-8);
   z-index: 501;
   width: 44px; height: 44px;
   display: flex; align-items: center; justify-content: center;
@@ -1151,7 +1151,7 @@ footer {
   pointer-events: all;
   transform: translateY(0);
 }
-[dir="rtl"] .back-to-top { right: auto; left: var(--sp-8); }
+[dir="rtl"] .back-to-top { left: auto; right: var(--sp-8); }
 
 /* ═══════════════════════════════════════════════════════════════
    16c. SOUND TOGGLE BUTTON
