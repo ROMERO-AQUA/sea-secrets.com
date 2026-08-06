@@ -374,12 +374,62 @@
   to { opacity: 1; transform: translateY(0) rotate(0deg); }
 }
 
-/* Hero description — bright & legible over the deep-sea scene */
-.hero-desc {
-  color: #dff3f6;
-  text-shadow: 0 2px 18px rgba(3,14,25,0.85), 0 0 40px rgba(53,224,213,0.25);
-  font-weight: 400;
+/* ────────────────────────────────────────────────────────────────
+   HERO REDESIGN — tight, balanced cinematic composition
+   ──────────────────────────────────────────────────────────────── */
+.hero-content {
+  padding: max(112px, 12vh) var(--container-px) max(56px, 7vh);
 }
+
+/* Soft scrim behind the text block for guaranteed contrast */
+.hero-content::before {
+  content: '';
+  position: absolute;
+  inset: -6% -8%;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 80% 90% at 20% 50%, rgba(4,13,24,0.62) 0%, transparent 72%),
+    linear-gradient(to right, rgba(4,13,24,0.35) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  color: #FFE9B8;
+  background: linear-gradient(90deg, rgba(240,201,106,0.16), rgba(240,201,106,0.04));
+  border: 1px solid rgba(240,201,106,0.3);
+  padding: 7px 16px;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  letter-spacing: 0.26em;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.55);
+  margin-bottom: clamp(1.1rem, 2.6vw, 1.8rem);
+}
+
+.hero-title {
+  color: #FDFBF5;
+  text-shadow: 0 4px 16px rgba(0,0,0,0.5), 0 12px 44px rgba(0,0,0,0.55);
+  margin-bottom: clamp(0.4rem, 1.2vw, 0.9rem);
+}
+
+.hero-script {
+  color: #FFE9B8;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6), 0 0 30px rgba(255,215,130,0.45);
+  margin: 0 0 clamp(1.1rem, 2.6vw, 1.9rem);
+}
+
+.hero-desc {
+  color: #EAF7F9;
+  max-width: 52ch;
+  font-size: 1.05rem;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.65), 0 0 40px rgba(53,224,213,0.22);
+  margin-bottom: clamp(1.5rem, 3.2vw, 2.3rem);
+}
+
+/* Tighter gap between the CTA pair */
+.hero-ctas { gap: clamp(0.8rem, 1.8vw, 1.4rem); }
+
+/* Darken the FX layer slightly so text never competes with it */
+.hero-fx { opacity: 0.85; }
 
 /* CTAs — magnetic with shine sweep */
 .btn-primary, .btn-outline {
