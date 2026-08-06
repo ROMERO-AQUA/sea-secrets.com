@@ -327,13 +327,13 @@
 /* Hero title — shimmering gold + split reveal */
 .hero-title { position: relative; }
 .hero-title em {
-  background: linear-gradient(110deg, var(--gold-shine-b) 10%, var(--gold-shine-a) 35%, var(--gold-shine-c) 50%, var(--gold-shine-b) 75%, var(--gold-shine-a) 100%);
+  background: linear-gradient(110deg, #F2DC9B 10%, #FFF3D1 30%, #FFEBBF 48%, #F8E3A8 62%, #FFF0C9 80%, #F2DC9B 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: goldFlow 6s linear infinite;
-  filter: drop-shadow(0 4px 30px rgba(184,150,62,0.25));
+  filter: drop-shadow(0 2px 6px rgba(3,14,25,0.65)) drop-shadow(0 6px 34px rgba(255,215,130,0.5));
 }
 @keyframes goldFlow {
   to { background-position: -200% 0; }
