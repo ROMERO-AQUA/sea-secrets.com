@@ -63,7 +63,7 @@
     "description": "Professional Red Sea boat trips, island excursions, snorkeling tours, and deep sea diving from Hurghada, Egypt.",
     "url": "https://sea-secrets.com",
     "telephone": "+201110890202",
-    "email": "mayghali@onetel.com",
+    "email": "info@sea-secret.com",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
@@ -187,14 +187,14 @@
               <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
             <div class="lang-dropdown" role="menu">
-              <button class="lang-option" data-lang="en" onclick="setLanguage('en')"><span class="lang-flag">🇬🇧</span> English</button>
-              <button class="lang-option" data-lang="de" onclick="setLanguage('de')"><span class="lang-flag">🇩🇪</span> Deutsch</button>
-              <button class="lang-option" data-lang="ru" onclick="setLanguage('ru')"><span class="lang-flag">🇷🇺</span> Русский</button>
-              <button class="lang-option" data-lang="ar" onclick="setLanguage('ar')"><span class="lang-flag">🇪🇬</span> العربية</button>
-              <button class="lang-option" data-lang="it" onclick="setLanguage('it')"><span class="lang-flag">🇮🇹</span> Italiano</button>
-              <button class="lang-option" data-lang="pl" onclick="setLanguage('pl')"><span class="lang-flag">🇵🇱</span> Polski</button>
-              <button class="lang-option" data-lang="cs" onclick="setLanguage('cs')"><span class="lang-flag">🇨🇿</span> Čeština</button>
-              <button class="lang-option" data-lang="uk" onclick="setLanguage('uk')"><span class="lang-flag">🇺🇦</span> Українська</button>
+              <button class="lang-option" role="menuitem" data-lang="en" onclick="setLanguage('en')"><span class="lang-flag">🇬🇧</span> English</button>
+              <button class="lang-option" role="menuitem" data-lang="de" onclick="setLanguage('de')"><span class="lang-flag">🇩🇪</span> Deutsch</button>
+              <button class="lang-option" role="menuitem" data-lang="ru" onclick="setLanguage('ru')"><span class="lang-flag">🇷🇺</span> Русский</button>
+              <button class="lang-option" role="menuitem" data-lang="ar" onclick="setLanguage('ar')"><span class="lang-flag">🇪🇬</span> العربية</button>
+              <button class="lang-option" role="menuitem" data-lang="it" onclick="setLanguage('it')"><span class="lang-flag">🇮🇹</span> Italiano</button>
+              <button class="lang-option" role="menuitem" data-lang="pl" onclick="setLanguage('pl')"><span class="lang-flag">🇵🇱</span> Polski</button>
+              <button class="lang-option" role="menuitem" data-lang="cs" onclick="setLanguage('cs')"><span class="lang-flag">🇨🇿</span> Čeština</button>
+              <button class="lang-option" role="menuitem" data-lang="uk" onclick="setLanguage('uk')"><span class="lang-flag">🇺🇦</span> Українська</button>
             </div>
           </div>
 
@@ -931,27 +931,35 @@
           <p data-i18n="contact.desc">Our team is available daily via WhatsApp to answer questions and confirm bookings.</p>
 
           <div class="contact-methods">
-            <a href="https://wa.me/201110890202" class="contact-method" target="_blank" rel="noopener">
-              <div class="method-icon wa">💬</div>
-              <div>
-                <div class="method-label" data-i18n="contact.primary_label">Primary WhatsApp (Booking)</div>
-                <div class="method-value">+20 111 089 0202 <span class="method-badge">Primary</span></div>
-              </div>
-            </a>
-
             <a href="tel:+201117398388" class="contact-method">
               <div class="method-icon phone">📞</div>
               <div>
-                <div class="method-label" data-i18n="contact.secondary_label">Secondary Contact</div>
-                <div class="method-value">+20 111 739 8388</div>
+                <div class="method-label" data-i18n="contact.primary_label">Primary Contact</div>
+                <div class="method-value">+20 111 739 8388 <span class="method-badge">Primary</span></div>
               </div>
             </a>
 
-            <a href="mailto:mayghali@onetel.com" class="contact-method">
+            <a href="https://wa.me/201110890202" class="contact-method" target="_blank" rel="noopener">
+              <div class="method-icon wa">💬</div>
+              <div>
+                <div class="method-label" data-i18n="contact.secondary_label">WhatsApp (Booking)</div>
+                <div class="method-value">+20 111 089 0202</div>
+              </div>
+            </a>
+
+            <a href="tel:+201221679216" class="contact-method">
+              <div class="method-icon phone">📞</div>
+              <div>
+                <div class="method-label" data-i18n="contact.third_label">Contact</div>
+                <div class="method-value">+20 122 167 9216</div>
+              </div>
+            </a>
+
+            <a href="mailto:info@sea-secret.com" class="contact-method">
               <div class="method-icon email">✉️</div>
               <div>
                 <div class="method-label" data-i18n="contact.email_label">Email</div>
-                <div class="method-value">mayghali@onetel.com</div>
+                <div class="method-value">info@sea-secret.com</div>
               </div>
             </a>
           </div>
